@@ -1,0 +1,10 @@
+{
+  "name": "broken-example",
+  "description": "Deliberately invalid: shows the profile validation messages",
+  "start_url": "https://www.example.com/",
+  "allowed_domains": ["books.toscrape.com"],
+  "item": "article..product",
+  "fields": {
+    "Title": {"select": "h3 > a", "type": "words"}
+  }
+}

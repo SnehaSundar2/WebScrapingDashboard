@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+scrapedash.log
+data/
+dashboards/
+exports/
+*.db

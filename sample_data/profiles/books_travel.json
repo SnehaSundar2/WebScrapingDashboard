@@ -1,0 +1,17 @@
+{
+  "name": "books-travel",
+  "description": "Travel category of Books to Scrape (a custom profile example)",
+  "start_url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
+  "allowed_domains": ["books.toscrape.com"],
+  "item": "article.product_pod",
+  "next_page": "li.next > a",
+  "key": "url",
+  "label": "title",
+  "fields": {
+    "title":    {"select": "h3 > a", "attr": "title", "type": "text", "required": true},
+    "price":    {"select": "p.price_color", "type": "money", "required": true},
+    "rating":   {"select": "p.star-rating", "attr": "class", "type": "rating"},
+    "in_stock": {"select": "p.availability", "type": "bool", "true_if": "in stock"},
+    "url":      {"select": "h3 > a", "attr": "href", "type": "url", "required": true}
+  }
+}
